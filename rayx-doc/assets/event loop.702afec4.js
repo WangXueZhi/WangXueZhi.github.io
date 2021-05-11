@@ -1,0 +1,1 @@
+import{d as e,s as n}from"./vendor.6fa74a5c.js";const o=e({name:"Markdown"});o.render=()=>n("div",{class:["md2vue-wrapper"],innerHTML:'<h1 id="event-loop">event loop</h1>\n'}),o.mounted=()=>{};export default o;
