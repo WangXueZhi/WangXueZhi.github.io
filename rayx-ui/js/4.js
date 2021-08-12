@@ -1,2 +1,1269 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{106:function(t,e,n){"use strict";var o=n(107),r=(n(11),n(65),n(108),n(109),n(110)),a=n.n(r),s=n(111),i=n.n(s),c=n(112),u=n.n(c),l=n(113),h=n.n(l),d=n(114),p=n.n(d),f=n(115),m=n.n(f),v=n(116),y=n.n(v),b=n(117),g=n.n(b),k=n(118),L=n.n(k),_=n(119),C=n.n(_),w=n(120),B=n.n(w),S=n(122),A=n.n(S),$=n(123),x=n.n($),D=new a.a({highlight:function(t,e){if(e&&x.a.getLanguage(e))try{return'<pre><code class="hljs" v-pre>'+x.a.highlight(e,t,!0).value+"</code></pre>"}catch(t){}return'<pre><code class="hljs" v-pre>'+D.utils.escapeHtml(t)+"</code></pre>"}});e.a={md:D,template:"<div><slot></slot></div>",data:function(){return{sourceData:this.source}},props:{watches:{type:Array,default:function(){return["source","show","toc"]}},source:{type:String,default:""},show:{type:Boolean,default:!0},highlight:{type:Boolean,default:!0},html:{type:Boolean,default:!0},xhtmlOut:{type:Boolean,default:!0},breaks:{type:Boolean,default:!0},linkify:{type:Boolean,default:!0},emoji:{type:Boolean,default:!0},typographer:{type:Boolean,default:!0},langPrefix:{type:String,default:"language-"},quotes:{type:String,default:"“”‘’"},tableClass:{type:String,default:"table"},taskLists:{type:Boolean,default:!0},toc:{type:Boolean,default:!1},tocId:{type:String},tocClass:{type:String,default:"table-of-contents"},tocFirstLevel:{type:Number,default:2},tocLastLevel:{type:Number},tocAnchorLink:{type:Boolean,default:!0},tocAnchorClass:{type:String,default:"toc-anchor"},tocAnchorLinkSymbol:{type:String,default:"#"},tocAnchorLinkSpace:{type:Boolean,default:!0},tocAnchorLinkClass:{type:String,default:"toc-anchor-link"},anchorAttributes:{type:Object,default:function(){return{}}},prerender:{type:Function,default:function(t){return t}},postrender:{type:Function,default:function(t){return t}}},computed:{tocLastLevelComputed:function(){return this.tocLastLevel>this.tocFirstLevel?this.tocLastLevel:this.tocFirstLevel+1}},render:function(t){var e=this;this.md=D.use(u.a).use(h.a).use(p.a).use(m.a).use(y.a).use(g.a).use(L.a).use(B.a,{throwOnError:!1,errorColor:" #cc0000"}).use(A.a,{enabled:this.taskLists}),this.emoji&&this.md.use(i.a),this.md.set({html:this.html,xhtmlOut:this.xhtmlOut,breaks:this.breaks,linkify:this.linkify,typographer:this.typographer,langPrefix:this.langPrefix,quotes:this.quotes}),this.md.renderer.rules.table_open=function(){return'<table class="'.concat(e.tableClass,'">\n')};var n=this.md.renderer.rules.link_open||function(t,e,n,o,r){return r.renderToken(t,e,n)};this.md.renderer.rules.link_open=function(t,o,r,a,s){return Object.keys(e.anchorAttributes).map((function(n){var r=t[o].attrIndex(n),a=e.anchorAttributes[n];r<0?t[o].attrPush([n,a]):t[o].attrs[r][1]=a})),n(t,o,r,a,s)},this.toc&&this.md.use(C.a,{tocClassName:this.tocClass,tocFirstLevel:this.tocFirstLevel,tocLastLevel:this.tocLastLevelComputed,anchorLink:this.tocAnchorLink,anchorLinkSymbol:this.tocAnchorLinkSymbol,anchorLinkSpace:this.tocAnchorLinkSpace,anchorClassName:this.tocAnchorClass,anchorLinkSymbolClassName:this.tocAnchorLinkClass,tocCallback:function(t,n,o){o&&(e.tocId&&document.getElementById(e.tocId)&&(document.getElementById(e.tocId).innerHTML=o),e.$emit("toc-rendered",o))}});var o=this.show?this.md.render(this.prerender(this.sourceData)):"";return o=this.postrender(o),this.$emit("rendered",o),t("div",{class:{"ra-docs-wrapper":!0},domProps:{innerHTML:o}})},beforeMount:function(){var t=this;if(this.$slots.default){this.sourceData="";var e,n=Object(o.a)(this.$slots.default);try{for(n.s();!(e=n.n()).done;){var r=e.value;this.sourceData+=r.text}}catch(t){n.e(t)}finally{n.f()}}this.$watch("source",(function(){t.sourceData=t.prerender(t.source),t.$forceUpdate()})),this.watches.forEach((function(e){t.$watch(e,(function(){t.$forceUpdate()}))}))}}},143:function(t,e,n){},155:function(t,e,n){},436:function(t,e){t.exports="下载仓库\n\n[github](https://github.com/WangXueZhi/rayx-ui.git) | [gitee](https://gitee.com/GeBiLaoWan/rayx-vue-components-lib.git)\n\n\n安装依赖\n```\nyarn 或者 npm i\n```\n\n开启dev\n```\nyarn dev 或者 npm run dev\n```\n\n编译\n```\nyarn build 或者 npm run build\n```\n\n打包库\n```\nyarn lib 或者 npm run lib\n```\n\n编译并打包\n```\nyarn build:all 或者 npm run build:all\n```\n"},437:function(t,e,n){"use strict";n(143)},469:function(t,e,n){"use strict";n.r(e);n(155);var o=n(24),r=n(106),a=n(436),s=n.n(a),i={name:"views.index",components:{Button:o.a,VueMarkdown:r.a},data:function(){return{start:s.a}},methods:{componentDoc:function(){this.$router.push("/docs/start")},developmentDoc:function(){this.$router.push("/development/base")},architectureDoc:function(){this.$router.push("/architecture/base")}}},c=(n(437),n(0)),u=Object(c.a)(i,(function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"home"},[n("div",{staticClass:"home-base"},[t._m(0),t._v(" "),t._m(1),t._v(" "),n("div",{staticClass:"ui-button"},[n("Button",{attrs:{colorType:"primary",type:"ghost",circle:""},on:{click:t.componentDoc}},[t._v("组件文档")]),t._v(" "),n("Button",{attrs:{colorType:"primary",type:"ghost",circle:""},on:{click:t.architectureDoc}},[t._v("脚手架说明")]),t._v(" "),n("Button",{attrs:{colorType:"primary",type:"ghost",circle:""},on:{click:t.developmentDoc}},[t._v("组件开发")])],1)]),t._v(" "),n("div",{staticClass:"home-markdown"},[n("div",{staticClass:"home-markdown-title"},[t._v("快速开始开发组件")]),t._v(" "),n("vue-markdown",[t._v(t._s(t.start))])],1)])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"ui-name-en"},[this._v("\n      Component Producer For\n      "),e("span",[this._v("Vue")])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"ui-name-cn"},[this._v("\n      快速搭建vue组件库\n      "),e("br"),this._v("开箱即用的组件库脚手架\n    ")])}],!1,null,"eacb82c8",null);e.default=u.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
+
+/***/ "./demos/button/demo0.vue":
+/*!********************************!*\
+  !*** ./demos/button/demo0.vue ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./demo0.vue?vue&type=template&id=9ec28e46& */ "./demos/button/demo0.vue?vue&type=template&id=9ec28e46&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "demos/button/demo0.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./demos/button/demo0.vue?vue&type=template&id=9ec28e46&":
+/*!***************************************************************!*\
+  !*** ./demos/button/demo0.vue?vue&type=template&id=9ec28e46& ***!
+  \***************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./demo0.vue?vue&type=template&id=9ec28e46& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo0.vue?vue&type=template&id=9ec28e46&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo0_vue_vue_type_template_id_9ec28e46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./demos/button/demo1.vue":
+/*!********************************!*\
+  !*** ./demos/button/demo1.vue ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./demo1.vue?vue&type=template&id=9ea65f44& */ "./demos/button/demo1.vue?vue&type=template&id=9ea65f44&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "demos/button/demo1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./demos/button/demo1.vue?vue&type=template&id=9ea65f44&":
+/*!***************************************************************!*\
+  !*** ./demos/button/demo1.vue?vue&type=template&id=9ea65f44& ***!
+  \***************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./demo1.vue?vue&type=template&id=9ea65f44& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo1.vue?vue&type=template&id=9ea65f44&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo1_vue_vue_type_template_id_9ea65f44___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./demos/button/demo2.vue":
+/*!********************************!*\
+  !*** ./demos/button/demo2.vue ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./demo2.vue?vue&type=template&id=9e8a3042& */ "./demos/button/demo2.vue?vue&type=template&id=9e8a3042&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "demos/button/demo2.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./demos/button/demo2.vue?vue&type=template&id=9e8a3042&":
+/*!***************************************************************!*\
+  !*** ./demos/button/demo2.vue?vue&type=template&id=9e8a3042& ***!
+  \***************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./demo2.vue?vue&type=template&id=9e8a3042& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo2.vue?vue&type=template&id=9e8a3042&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_demo2_vue_vue_type_template_id_9e8a3042___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./demos/button/index.vue":
+/*!********************************!*\
+  !*** ./demos/button/index.vue ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=53ad8882& */ "./demos/button/index.vue?vue&type=template&id=53ad8882&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./demos/button/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "demos/button/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./demos/button/index.vue?vue&type=script&lang=js&":
+/*!*********************************************************!*\
+  !*** ./demos/button/index.vue?vue&type=script&lang=js& ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib!../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./demos/button/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./demos/button/index.vue?vue&type=template&id=53ad8882&":
+/*!***************************************************************!*\
+  !*** ./demos/button/index.vue?vue&type=template&id=53ad8882& ***!
+  \***************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=53ad8882& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/index.vue?vue&type=template&id=53ad8882&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_53ad8882___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./demos/button/index.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./demos/button/index.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _demo0_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./demo0.vue */ "./demos/button/demo0.vue");
+/* harmony import */ var _demo1_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./demo1.vue */ "./demos/button/demo1.vue");
+/* harmony import */ var _demo2_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./demo2.vue */ "./demos/button/demo2.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "views.docs.components.button",
+  components: {
+    demo0: _demo0_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    demo1: _demo1_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    demo2: _demo2_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    return {
+      demoControlShowCode: []
+    };
+  },
+  methods: {
+    demoControlShowCodeTotgal: function demoControlShowCodeTotgal(index) {
+      if (this.demoControlShowCode[index]) {
+        this.$set(this.demoControlShowCode[index], "show", !this.demoControlShowCode[index].show);
+      } else {
+        this.$set(this.demoControlShowCode, index, {
+          show: true
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo0.vue?vue&type=template&id=9ec28e46&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./demos/button/demo0.vue?vue&type=template&id=9ec28e46& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "demo-wrapper" }, [
+    _c(
+      "div",
+      { staticClass: "demo-button-Type" },
+      [
+        _c("r-button", { attrs: { hide: "" } }, [_vm._v("默认色")]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "primary" } }, [_vm._v("主色")]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "info" } }, [_vm._v("信息色")]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "success" } }, [_vm._v("成功色")]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "warning" } }, [_vm._v("警告色")]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "error" } }, [_vm._v("错误色")])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo1.vue?vue&type=template&id=9ea65f44&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./demos/button/demo1.vue?vue&type=template&id=9ea65f44& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "demo-wrapper" }, [
+    _c(
+      "div",
+      { staticClass: "demo-button-Type" },
+      [
+        _c("r-button", { attrs: { colorType: "primary", type: "ghost" } }, [
+          _vm._v("幽灵按钮")
+        ]),
+        _vm._v(" "),
+        _c("r-button", { attrs: { colorType: "primary", type: "dashed" } }, [
+          _vm._v("虚线边框")
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/demo2.vue?vue&type=template&id=9e8a3042&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./demos/button/demo2.vue?vue&type=template&id=9e8a3042& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "demo-wrapper" }, [
+    _c(
+      "div",
+      { staticClass: "demo-button-Type" },
+      [
+        _c(
+          "r-button",
+          { attrs: { colorType: "primary", type: "ghost", circle: "" } },
+          [_vm._v("幽灵按钮")]
+        ),
+        _vm._v(" "),
+        _c(
+          "r-button",
+          { attrs: { colorType: "primary", type: "dashed", circle: "" } },
+          [_vm._v("按")]
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./demos/button/index.vue?vue&type=template&id=53ad8882&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./demos/button/index.vue?vue&type=template&id=53ad8882& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "ra-docs-wrapper" }, [
+    _c("h1", [_vm._v("Button 按钮")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("基础组件，触发业务逻辑时使用")]),
+    _vm._v(" "),
+    _c("h2", [_vm._v("示例")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("颜色")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "ra-docs-demo-examp" }, [
+      _c("div", { staticClass: "ra-docs-demo-comps" }, [_c("demo0")], 1),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-code",
+          class: {
+            showCode:
+              _vm.demoControlShowCode[0] && !!_vm.demoControlShowCode[0].show
+          }
+        },
+        [_vm._m(0)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-control",
+          on: {
+            click: function($event) {
+              return _vm.demoControlShowCodeTotgal(0)
+            }
+          }
+        },
+        [
+          _vm._v(
+            "\n                    " +
+              _vm._s(
+                _vm.demoControlShowCode[0] && _vm.demoControlShowCode[0].show
+                  ? "隐藏代码"
+                  : "显示代码"
+              ) +
+              "\n                "
+          )
+        ]
+      )
+    ]),
+    _c("p", [_vm._v("类型")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "ra-docs-demo-examp" }, [
+      _c("div", { staticClass: "ra-docs-demo-comps" }, [_c("demo1")], 1),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-code",
+          class: {
+            showCode:
+              _vm.demoControlShowCode[1] && !!_vm.demoControlShowCode[1].show
+          }
+        },
+        [_vm._m(1)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-control",
+          on: {
+            click: function($event) {
+              return _vm.demoControlShowCodeTotgal(1)
+            }
+          }
+        },
+        [
+          _vm._v(
+            "\n                    " +
+              _vm._s(
+                _vm.demoControlShowCode[1] && _vm.demoControlShowCode[1].show
+                  ? "隐藏代码"
+                  : "显示代码"
+              ) +
+              "\n                "
+          )
+        ]
+      )
+    ]),
+    _c("p", [_vm._v("形状")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "ra-docs-demo-examp" }, [
+      _c("div", { staticClass: "ra-docs-demo-comps" }, [_c("demo2")], 1),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-code",
+          class: {
+            showCode:
+              _vm.demoControlShowCode[2] && !!_vm.demoControlShowCode[2].show
+          }
+        },
+        [_vm._m(2)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "ra-docs-demo-control",
+          on: {
+            click: function($event) {
+              return _vm.demoControlShowCodeTotgal(2)
+            }
+          }
+        },
+        [
+          _vm._v(
+            "\n                    " +
+              _vm._s(
+                _vm.demoControlShowCode[2] && _vm.demoControlShowCode[2].show
+                  ? "隐藏代码"
+                  : "显示代码"
+              ) +
+              "\n                "
+          )
+        ]
+      )
+    ]),
+    _c("h2", [_vm._v("props")]),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _c("h2", [_vm._v("event")]),
+    _vm._v(" "),
+    _vm._m(4)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("pre", [
+      _c("code", { pre: true, attrs: { class: "hljs" } }, [
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-wrapper"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-button-Type"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("hide")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("默认色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"primary"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("主色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"info"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("信息色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"success"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("成功色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"warning"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("警告色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"error"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("错误色"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("pre", [
+      _c("code", { pre: true, attrs: { class: "hljs" } }, [
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-wrapper"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-button-Type"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"primary"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("type")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"ghost"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("幽灵按钮"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"primary"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("type")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"dashed"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("虚线边框"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("pre", [
+      _c("code", { pre: true, attrs: { class: "hljs" } }, [
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-wrapper"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("class")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"demo-button-Type"')
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"primary"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("type")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"ghost"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("circle")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("幽灵按钮"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n      "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("<"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("colorType")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"primary"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("type")
+          ]),
+          _vm._v("="),
+          _c("span", { pre: true, attrs: { class: "hljs-string" } }, [
+            _vm._v('"dashed"')
+          ]),
+          _vm._v(" "),
+          _c("span", { pre: true, attrs: { class: "hljs-attr" } }, [
+            _vm._v("circle")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("按"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("r-button")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n    "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n  "),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("div")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n"),
+        _c("span", { pre: true, attrs: { class: "hljs-tag" } }, [
+          _vm._v("</"),
+          _c("span", { pre: true, attrs: { class: "hljs-name" } }, [
+            _vm._v("template")
+          ]),
+          _vm._v(">")
+        ]),
+        _vm._v("\n")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", [
+      _c("thead", [
+        _c("tr", [
+          _c("th", [_vm._v("参数")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("说明")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("类型")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("默认值")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tbody", [
+        _c("tr", [
+          _c("td", [_vm._v("colorType")]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v("颜色类型：default|primary|info|success|warning|error")
+          ]),
+          _vm._v(" "),
+          _c("td", [_vm._v("String")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("default")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("type")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("按钮类型：default|ghost|dashed")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("String")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("default")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("circle")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("最大圆角")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("Boolean")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("false")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("disabled")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("禁用")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("Boolean")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("false")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", [
+      _c("thead", [
+        _c("tr", [
+          _c("th", [_vm._v("名称")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("说明")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("返回值")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tbody", [
+        _c("tr", [
+          _c("td", [_vm._v("click")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("点击")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("null")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ })
+
+}]);
 //# sourceMappingURL=4.js.map

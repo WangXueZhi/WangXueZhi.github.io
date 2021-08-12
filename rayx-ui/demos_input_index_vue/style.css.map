@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://rayx-ui/./demos/input/demo6.vue"],"names":[],"mappings":"AACA;EACE,aAAa;AAAA;AAEf;EACE,iBAAiB;AAAA;AADnB;IAGI,eAAe;AAAA","file":"demos_input_index_vue/style.css","sourcesContent":["\n.demo-input-event {\n  display: flex;\n}\n.demo-input-event-name {\n  margin-left: 50px;\n  p {\n    font-size: 25px;\n  }\n}\n"],"sourceRoot":""}
