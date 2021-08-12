@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./demos/input/demo6.vue?534c"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"2/style.css","sourcesContent":[".demo-input-event {\n  display: flex;\n}\n.demo-input-event-name {\n  margin-left: 50px;\n}\n.demo-input-event-name p {\n    font-size: 25px;\n}\n"],"sourceRoot":""}

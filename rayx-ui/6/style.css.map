@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./demos/scroll-bar/demo0.vue?a994"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"6/style.css","sourcesContent":[".test-scroll-wrapper {\n  width: 240px;\n  height: 200px;\n  border: 1px solid #969696;\n}\n.test-scroll-wrapper .test-scroll-item {\n    text-align: center;\n}\n"],"sourceRoot":""}
